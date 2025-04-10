@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Pokemon {
 
     private String name;
@@ -6,6 +8,7 @@ public abstract class Pokemon {
     private String food;
     private String sound;
     protected String type;
+    protected ArrayList<String> attacks = null;
 
     public Pokemon(String name, int level, int hp, String food, String sound) {
         this.name = name;
@@ -60,5 +63,7 @@ public abstract class Pokemon {
         return type;
     }
 
-    public abstract ArrayList<String> getAttacks();
+    public ArrayList<String> getAttacks() {
+        return attacks;
+    };
 }

@@ -184,7 +184,7 @@ public class PokemonGymImpl implements PokemonGym {
                 electric = new ElectricPokemon(pokemon.getName(), pokemon.getLevel(), pokemon.getHp(), pokemon.getFood(), pokemon.getSound());
                 switch (choosenAttack) {
                     case "thunderpunch" -> electric.thunderPunch(pokemon, gymPokemon);
-                    case "electroball" -> electric.electroBall(pokemon, gymPokemon);
+                    case "electroball" -> electric.electricBall(pokemon, gymPokemon);
                     case "thunder" -> electric.thunder(pokemon, gymPokemon);
                     default -> electric.voltTackle(pokemon, gymPokemon);
                 }
@@ -235,7 +235,7 @@ public class PokemonGymImpl implements PokemonGym {
                 String attack = electric.getAttacks().get(randomAttackByGymOwner());
                 switch (attack) {
                     case "thunderPunch" -> electric.thunderPunch(gymPokemon, pokemon);
-                    case "electroBall" -> electric.electroBall(gymPokemon, pokemon);
+                    case "electroBall" -> electric.electricBall(gymPokemon, pokemon);
                     case "thunder" -> electric.thunder(gymPokemon, pokemon);
                     default -> electric.voltTackle(gymPokemon, pokemon);
                 }
